@@ -1,0 +1,15 @@
+# .github/workflows/main.yml
+name: CI/CD using Shared Workflow
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  use-shared-workflow:
+    uses: org/shared-ci-cd/.github/workflows/ci-cd.yml@main
+    with:
+      run-tests: true
+      run-build: true
