@@ -9,7 +9,7 @@ on:
 
 jobs:
   use-shared-workflow:
-    uses: 123shivamsinha/shared-library/.github/workflows/ci-cd.yaml@main
+    uses: .github/workflows/ci-cd.yaml@main
     with:
       run-tests: true
       run-build: true
