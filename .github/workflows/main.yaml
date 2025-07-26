@@ -2,6 +2,7 @@
 name: CI/CD using Shared Workflow
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
   pull_request:
@@ -9,7 +10,7 @@ on:
 
 jobs:
   use-shared-workflow:
-    uses: .github/workflows/ci-cd.yaml@main
+    uses: 123shivamsinha/shared-library/.github/workflows/ci-cd.yaml@main
     with:
       run-tests: true
       run-build: true
